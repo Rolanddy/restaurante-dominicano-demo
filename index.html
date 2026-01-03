@@ -1,160 +1,473 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="es" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
-  <title>Sazón Tropical | Restaurante Dominicano en Orlando</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sazón Tropical | Comida Dominicana</title>
 
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Google Fonts -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 
   <style>
-    body { font-family: 'Inter', sans-serif; }
-    h1, h2, h3 { font-family: 'Playfair Display', serif; }
+    body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+    h1,h2,h3,h4 { font-family: "Playfair Display", serif; }
   </style>
 </head>
 
 <body class="bg-slate-50 text-slate-900">
 
-<!-- HEADER -->
-<header class="fixed top-0 inset-x-0 z-50 bg-white/80 backdrop-blur shadow-sm">
-  <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-    <a href="#inicio" class="flex items-center gap-3">
-      <img src="./assets/logo.jpg" alt="Logo de Sazón Tropical" class="h-10 w-auto">
-      <div class="leading-tight">
-        <div class="text-xs text-slate-500">Comida Dominicana</div>
-        <div class="font-semibold">Sazón Tropical</div>
-      </div>
-    </a>
-
-    <a href="#contacto"
-       class="hidden md:inline-flex items-center gap-2 bg-red-600 text-white px-4 py-2 rounded-lg shadow hover:shadow-lg hover:scale-105 transition">
-      Ordenar
-    </a>
-  </div>
-</header>
-
-<div class="h-16"></div> <!-- spacer -->
-
-<!-- HERO -->
-<section id="inicio" class="relative overflow-hidden">
-
-  <!-- Fondo -->
-  <div class="absolute inset-0 -z-10">
-    <div class="absolute inset-0 bg-white/70"></div>
-    <div class="absolute inset-0 opacity-10 blur-[2px]"
-         style="background-image:url('./assets/gallery-2.jpg'); background-size:cover; background-position:center;">
-    </div>
-
-    <!-- luces -->
-    <div class="absolute -top-24 -left-24 w-[500px] h-[500px] bg-red-500/15 rounded-full blur-3xl"></div>
-    <div class="absolute -bottom-24 -right-24 w-[500px] h-[500px] bg-blue-500/15 rounded-full blur-3xl"></div>
-  </div>
-
-  <div class="max-w-6xl mx-auto px-6 py-20 md:py-28 grid md:grid-cols-2 gap-12 items-center">
-
-    <!-- TEXTO -->
-    <div>
-
-      <!-- LOGO HERO -->
-      <div class="relative mb-6 flex justify-center md:justify-start">
-        <div class="absolute w-40 h-40 bg-red-500/10 rounded-full blur-3xl"></div>
-        <img src="./assets/logo.jpg"
-             alt="Logo de Sazón Tropical"
-             class="relative h-24 md:h-28 object-contain drop-shadow-lg hover:scale-105 transition">
-      </div>
-
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">
-        Sazón Tropical
-      </h1>
-
-      <p class="text-lg text-slate-600 mb-6">
-        Restaurante Dominicano en Orlando, FL.  
-        Sabor casero, porciones generosas y el calor de nuestra cocina.
-      </p>
-
-      <div class="flex flex-wrap gap-4 mb-8">
-        <a href="https://wa.me/1XXXXXXXXXX"
-           class="bg-green-600 text-white px-6 py-3 rounded-xl shadow hover:shadow-xl hover:scale-105 transition">
-          Ordenar por WhatsApp
+  <!-- NAV -->
+  <header class="fixed top-0 inset-x-0 z-50">
+    <div class="bg-white/70 backdrop-blur-xl border-b border-white/40">
+      <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+        <!-- Brand -->
+        <a href="#inicio" class="flex items-center gap-3">
+          <img src="./assets/logo.jpg" alt="Logo Sazón Tropical" class="w-10 h-10 rounded-xl object-cover shadow" />
+          <div class="leading-tight">
+            <div class="text-xs text-slate-500">Comida Dominicana</div>
+            <div class="font-extrabold tracking-tight">Sazón Tropical</div>
+          </div>
         </a>
 
-        <a href="#menu"
-           class="bg-white px-6 py-3 rounded-xl border shadow hover:shadow-lg hover:-translate-y-0.5 transition">
-          Ver Menú
-        </a>
+        <!-- Links (desktop) -->
+        <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-slate-700">
+          <a class="hover:text-slate-950" href="#quienes">Quiénes somos</a>
+          <a class="hover:text-slate-950" href="#especialidades">Especialidades</a>
+          <a class="hover:text-slate-950" href="#menu">Menú</a>
+          <a class="hover:text-slate-950" href="#plato">Plato del día</a>
+          <a class="hover:text-slate-950" href="#galeria">Galería</a>
+          <a class="hover:text-slate-950" href="#ubicacion">Localización</a>
+          <a class="hover:text-slate-950" href="#contacto">Contacto</a>
+        </nav>
 
-        <a href="tel:+1XXXXXXXXXX"
-           class="bg-white px-6 py-3 rounded-xl border shadow hover:shadow-lg hover:-translate-y-0.5 transition">
-          Llamar
+        <!-- CTA -->
+        <a href="#contacto"
+           class="inline-flex items-center justify-center px-4 py-2 rounded-xl font-bold text-white bg-red-600 shadow-lg shadow-red-600/25
+                  hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 transition">
+          Ordenar
         </a>
       </div>
 
-      <div class="grid grid-cols-3 gap-4 text-sm">
-        <div class="bg-white/70 backdrop-blur rounded-xl p-4 shadow">
-          <strong>Comida fresca</strong><br>Hecha al momento
+      <!-- Mobile quick links -->
+      <div class="lg:hidden px-4 pb-3">
+        <div class="flex gap-2 overflow-x-auto text-xs font-semibold text-slate-700">
+          <a class="px-3 py-2 rounded-xl bg-white/70 border border-white/60" href="#quienes">Quiénes</a>
+          <a class="px-3 py-2 rounded-xl bg-white/70 border border-white/60" href="#menu">Menú</a>
+          <a class="px-3 py-2 rounded-xl bg-white/70 border border-white/60" href="#plato">Plato</a>
+          <a class="px-3 py-2 rounded-xl bg-white/70 border border-white/60" href="#galeria">Galería</a>
+          <a class="px-3 py-2 rounded-xl bg-white/70 border border-white/60" href="#ubicacion">Ubicación</a>
+          <a class="px-3 py-2 rounded-xl bg-white/70 border border-white/60" href="#contacto">Contacto</a>
         </div>
-        <div class="bg-white/70 backdrop-blur rounded-xl p-4 shadow">
-          <strong>Sabor real</strong><br>Tradición dominicana
+      </div>
+    </div>
+  </header>
+
+  <!-- Spacer for fixed nav -->
+  <div class="h-24 lg:h-20"></div>
+
+  <!-- HERO -->
+  <section id="inicio" class="relative overflow-hidden">
+    <!-- Background image + blur -->
+    <div class="absolute inset-0 -z-10">
+      <div class="absolute inset-0 bg-white/55"></div>
+      <div class="absolute inset-0"
+           style="background-image:url('./assets/gallery-2.jpg'); background-size:cover; background-position:center;">
+      </div>
+      <div class="absolute inset-0 backdrop-blur-xl bg-white/35"></div>
+
+      <!-- Watermark "sello" -->
+      <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div class="text-[64px] md:text-[120px] font-black tracking-tight text-slate-900/10 blur-[1px] select-none">
+          SAZÓN TROPICAL
         </div>
-        <div class="bg-white/70 backdrop-blur rounded-xl p-4 shadow">
-          <strong>Para familia</strong><br>Porciones grandes
+      </div>
+
+      <!-- Color glow -->
+      <div class="absolute -top-24 -left-24 w-[520px] h-[520px] rounded-full bg-red-500/20 blur-3xl"></div>
+      <div class="absolute -top-24 -right-24 w-[520px] h-[520px] rounded-full bg-blue-600/20 blur-3xl"></div>
+    </div>
+
+    <div class="max-w-6xl mx-auto px-4 py-10 md:py-16">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div class="bg-white/55 border border-white/60 backdrop-blur-xl rounded-3xl p-6 md:p-8 shadow-xl">
+          <div class="flex items-center gap-3">
+            <img src="./assets/logo.jpg" alt="Logo" class="w-14 h-14 rounded-2xl object-cover shadow" />
+            <div>
+              <div class="text-xs font-semibold text-slate-500">Restaurante Dominicano</div>
+              <div class="text-sm font-bold text-slate-800">Orlando, FL</div>
+            </div>
+          </div>
+
+          <h1 class="mt-5 text-4xl md:text-5xl font-extrabold leading-tight">
+            Sazón Tropical
+          </h1>
+
+          <p class="mt-3 text-slate-700 text-lg">
+            Sabor casero, porciones generosas y el calor de nuestra cocina.
+          </p>
+
+          <!-- Buttons -->
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="#contacto"
+               class="px-5 py-3 rounded-xl font-bold text-white bg-emerald-600 shadow-lg shadow-emerald-600/25
+                      hover:-translate-y-0.5 hover:shadow-xl active:translate-y-0 transition">
+              Ordenar por WhatsApp
+            </a>
+
+            <a href="#menu"
+               class="px-5 py-3 rounded-xl font-bold bg-white/70 border border-white/70 shadow-md
+                      hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 transition">
+              Ver Menú
+            </a>
+
+            <a href="#contacto"
+               class="px-5 py-3 rounded-xl font-bold bg-white/70 border border-white/70 shadow-md
+                      hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 transition">
+              Llamar
+            </a>
+          </div>
+
+          <!-- Mini cards -->
+          <div class="mt-6 grid grid-cols-3 gap-3">
+            <div class="rounded-2xl bg-white/70 border border-white/70 p-3 shadow-sm">
+              <div class="text-sm font-extrabold">Comida fresca</div>
+              <div class="text-xs text-slate-600 mt-1">Hecha al momento.</div>
+            </div>
+            <div class="rounded-2xl bg-white/70 border border-white/70 p-3 shadow-sm">
+              <div class="text-sm font-extrabold">Sabor real</div>
+              <div class="text-xs text-slate-600 mt-1">Tradición dominicana.</div>
+            </div>
+            <div class="rounded-2xl bg-white/70 border border-white/70 p-3 shadow-sm">
+              <div class="text-sm font-extrabold">Para familia</div>
+              <div class="text-xs text-slate-600 mt-1">Porciones grandes.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero image card -->
+        <div class="bg-white/55 border border-white/60 backdrop-blur-xl rounded-3xl p-5 shadow-xl">
+          <div class="rounded-2xl overflow-hidden shadow-lg bg-white/70 backdrop-blur">
+            <img src="./assets/gallery-1.jpg" class="w-full h-72 md:h-80 object-cover" alt="Comida dominicana" />
+          </div>
+          <p class="text-xs text-slate-600 mt-3">
+            *Foto real del local/comida. (Si alguna se ve cortada, te digo cómo arreglarla con Nano Banana).
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUIENES SOMOS -->
+  <section id="quienes" class="relative py-14">
+    <div class="absolute inset-0 -z-10">
+      <div class="absolute inset-0"
+           style="background-image:url('./assets/gallery-3.jpg'); background-size:cover; background-position:center;"></div>
+      <div class="absolute inset-0 backdrop-blur-2xl bg-white/70"></div>
+      <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div class="text-[56px] md:text-[96px] font-black tracking-tight text-slate-900/10 blur-[1px] select-none">
+          SAZÓN TROPICAL
         </div>
       </div>
     </div>
 
-    <!-- IMAGEN HERO -->
-    <div class="flex justify-center">
-      <div class="rounded-2xl overflow-hidden shadow-lg bg-white/70 backdrop-blur w-full max-w-sm">
-        <img src="./assets/gallery-1.jpg"
-             alt="Plato dominicano"
-             class="w-full h-80 object-cover">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="bg-white/65 border border-white/70 backdrop-blur-xl rounded-3xl p-7 shadow-xl">
+        <h2 class="text-3xl font-extrabold">Quiénes somos</h2>
+        <p class="mt-3 text-slate-700 text-lg">
+          Somos un restaurante dominicano familiar: cocina con sazón de casa, atención cálida y platos que te devuelven a la isla.
+        </p>
+        <div class="mt-6 grid md:grid-cols-3 gap-4">
+          <div class="rounded-2xl bg-white/70 border border-white/70 p-5 shadow-sm">
+            <div class="font-extrabold">Calidad</div>
+            <div class="text-sm text-slate-600 mt-1">Ingredientes frescos y consistencia.</div>
+          </div>
+          <div class="rounded-2xl bg-white/70 border border-white/70 p-5 shadow-sm">
+            <div class="font-extrabold">Sazón</div>
+            <div class="text-sm text-slate-600 mt-1">Recetas tradicionales dominicanas.</div>
+          </div>
+          <div class="rounded-2xl bg-white/70 border border-white/70 p-5 shadow-sm">
+            <div class="font-extrabold">Familia</div>
+            <div class="text-sm text-slate-600 mt-1">Un lugar para compartir y repetir.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESPECIALIDADES (ahora placeholders tipo Menu 1, Menu 2...) -->
+  <section id="especialidades" class="relative py-14">
+    <div class="absolute inset-0 -z-10">
+      <div class="absolute inset-0"
+           style="background-image:url('./assets/gallery-4.jpg'); background-size:cover; background-position:center;"></div>
+      <div class="absolute inset-0 backdrop-blur-2xl bg-white/75"></div>
+      <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div class="text-[56px] md:text-[96px] font-black tracking-tight text-slate-900/10 blur-[1px] select-none">
+          SAZÓN TROPICAL
+        </div>
       </div>
     </div>
 
-  </div>
-</section>
-
-<!-- MENU -->
-<section id="menu" class="py-24">
-  <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-3xl font-bold mb-12 text-center">
-      Especialidades Dominicanas
-    </h2>
-
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-white rounded-xl shadow p-6">
-        <img src="./assets/gallery-2.jpg" class="rounded-lg mb-4 w-full h-48 object-cover">
-        <h3 class="text-xl font-semibold">Mangú con los Tres Golpes</h3>
-        <p class="text-slate-600">Plátano majado con salami, huevo y queso frito.</p>
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center">
+        <h2 class="text-3xl font-extrabold">Especialidades</h2>
+        <p class="mt-2 text-slate-600">Aquí va tu selección favorita (por ahora con nombres genéricos).</p>
       </div>
 
-      <div class="bg-white rounded-xl shadow p-6">
-        <img src="./assets/gallery-3.jpg" class="rounded-lg mb-4 w-full h-48 object-cover">
-        <h3 class="text-xl font-semibold">Sancocho</h3>
-        <p class="text-slate-600">Caldo tradicional con carnes y víveres.</p>
-      </div>
+      <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <!-- 6 cards -->
+        <div class="bg-white/65 border border-white/70 backdrop-blur-xl rounded-3xl p-5 shadow-xl hover:-translate-y-1 transition">
+          <img src="./assets/gallery-1.jpg" class="w-full h-44 object-cover rounded-2xl" alt="Menu 1">
+          <h3 class="mt-4 text-xl font-extrabold">Menú 1</h3>
+          <p class="text-sm text-slate-600 mt-1">Descripción corta del plato. (Luego se cambia).</p>
+        </div>
 
-      <div class="bg-white rounded-xl shadow p-6">
-        <img src="./assets/gallery-1.jpg" class="rounded-lg mb-4 w-full h-48 object-cover">
-        <h3 class="text-xl font-semibold">Pollo Guisado</h3>
-        <p class="text-slate-600">Salsa criolla, sabor auténtico.</p>
+        <div class="bg-white/65 border border-white/70 backdrop-blur-xl rounded-3xl p-5 shadow-xl hover:-translate-y-1 transition">
+          <img src="./assets/gallery-2.jpg" class="w-full h-44 object-cover rounded-2xl" alt="Menu 2">
+          <h3 class="mt-4 text-xl font-extrabold">Menú 2</h3>
+          <p class="text-sm text-slate-600 mt-1">Descripción corta del plato. (Luego se cambia).</p>
+        </div>
+
+        <div class="bg-white/65 border border-white/70 backdrop-blur-xl rounded-3xl p-5 shadow-xl hover:-translate-y-1 transition">
+          <img src="./assets/gallery-3.jpg" class="w-full h-44 object-cover rounded-2xl" alt="Menu 3">
+          <h3 class="mt-4 text-xl font-extrabold">Menú 3</h3>
+          <p class="text-sm text-slate-600 mt-1">Descripción corta del plato. (Luego se cambia).</p>
+        </div>
+
+        <div class="bg-white/65 border border-white/70 backdrop-blur-xl rounded-3xl p-5 shadow-xl hover:-translate-y-1 transition">
+          <img src="./assets/gallery-4.jpg" class="w-full h-44 object-cover rounded-2xl" alt="Menu 4">
+          <h3 class="mt-4 text-xl font-extrabold">Menú 4</h3>
+          <p class="text-sm text-slate-600 mt-1">Descripción corta del plato. (Luego se cambia).</p>
+        </div>
+
+        <div class="bg-white/65 border border-white/70 backdrop-blur-xl rounded-3xl p-5 shadow-xl hover:-translate-y-1 transition">
+          <img src="./assets/gallery-5.jpg" class="w-full h-44 object-cover rounded-2xl" alt="Menu 5">
+          <h3 class="mt-4 text-xl font-extrabold">Menú 5</h3>
+          <p class="text-sm text-slate-600 mt-1">Descripción corta del plato. (Luego se cambia).</p>
+        </div>
+
+        <div class="bg-white/65 border border-white/70 backdrop-blur-xl rounded-3xl p-5 shadow-xl hover:-translate-y-1 transition">
+          <img src="./assets/gallery-6.jpg" class="w-full h-44 object-cover rounded-2xl" alt="Menu 6">
+          <h3 class="mt-4 text-xl font-extrabold">Menú 6</h3>
+          <p class="text-sm text-slate-600 mt-1">Descripción corta del plato. (Luego se cambia).</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- FOOTER -->
-<footer class="bg-white border-t py-10">
-  <div class="max-w-6xl mx-auto px-6 text-center text-sm text-slate-500">
-    © 2026 Sazón Tropical. Todos los derechos reservados.
-  </div>
-</footer>
+  <!-- MENU (fotos del menu) -->
+  <section id="menu" class="relative py-14">
+    <div class="absolute inset-0 -z-10">
+      <div class="absolute inset-0"
+           style="background-image:url('./assets/gallery-5.jpg'); background-size:cover; background-position:center;"></div>
+      <div class="absolute inset-0 backdrop-blur-2xl bg-white/75"></div>
+      <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div class="text-[56px] md:text-[96px] font-black tracking-tight text-slate-900/10 blur-[1px] select-none">
+          SAZÓN TROPICAL
+        </div>
+      </div>
+    </div>
 
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center">
+        <h2 class="text-3xl font-extrabold">Menú</h2>
+        <p class="mt-2 text-slate-600">Fotos del menú (listas para reemplazar).</p>
+      </div>
+
+      <div class="mt-8 grid md:grid-cols-3 gap-5">
+        <div class="bg-white/65 border border-white/70 backdrop-blur-xl rounded-3xl p-5 shadow-xl">
+          <img src="./assets/menu-1.jpg" class="w-full h-72 object-cover rounded-2xl" alt="Menú 1">
+          <div class="mt-3 font-extrabold">Menú 1</div>
+        </div>
+
+        <div class="bg-white/65 border border-white/70 backdrop-blur-xl rounded-3xl p-5 shadow-xl">
+          <img src="./assets/menu-2.jpg" class="w-full h-72 object-cover rounded-2xl" alt="Menú 2">
+          <div class="mt-3 font-extrabold">Menú 2</div>
+        </div>
+
+        <div class="bg-white/65 border border-white/70 backdrop-blur-xl rounded-3xl p-5 shadow-xl">
+          <img src="./assets/menu-3.jpg" onerror="this.onerror=null;this.src='./assets/menu-2.jpg';"
+               class="w-full h-72 object-cover rounded-2xl" alt="Menú 3">
+          <div class="mt-3 font-extrabold">Menú 3</div>
+        </div>
+      </div>
+
+      <div class="mt-6 text-center">
+        <a href="#contacto"
+           class="inline-flex items-center justify-center px-6 py-3 rounded-2xl font-extrabold text-white bg-red-600
+                  shadow-lg shadow-red-600/25 hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 transition">
+          Ordenar ahora
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLATO DEL DIA -->
+  <section id="plato" class="relative py-14">
+    <div class="absolute inset-0 -z-10">
+      <div class="absolute inset-0"
+           style="background-image:url('./assets/gallery-6.jpg'); background-size:cover; background-position:center;"></div>
+      <div class="absolute inset-0 backdrop-blur-2xl bg-white/75"></div>
+      <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div class="text-[56px] md:text-[96px] font-black tracking-tight text-slate-900/10 blur-[1px] select-none">
+          SAZÓN TROPICAL
+        </div>
+      </div>
+    </div>
+
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="bg-white/65 border border-white/70 backdrop-blur-xl rounded-3xl p-7 shadow-xl grid md:grid-cols-2 gap-6 items-center">
+        <div>
+          <h2 class="text-3xl font-extrabold">Plato del día</h2>
+          <p class="mt-2 text-slate-700">
+            Aquí puedes poner el especial diario. Por ahora: <span class="font-bold">Especial del Día</span>.
+          </p>
+
+          <div class="mt-5 flex flex-wrap gap-3">
+            <a href="#contacto"
+               class="px-5 py-3 rounded-xl font-bold text-white bg-emerald-600 shadow-lg shadow-emerald-600/25
+                      hover:-translate-y-0.5 hover:shadow-xl active:translate-y-0 transition">
+              Pedir por WhatsApp
+            </a>
+            <a href="#menu"
+               class="px-5 py-3 rounded-xl font-bold bg-white/70 border border-white/70 shadow-md
+                      hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 transition">
+              Ver Menú
+            </a>
+          </div>
+        </div>
+
+        <div class="rounded-3xl overflow-hidden shadow-lg bg-white/70 backdrop-blur">
+          <img src="./assets/gallery-4.jpg" class="w-full h-72 object-cover" alt="Plato del día">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIA -->
+  <section id="galeria" class="relative py-14">
+    <div class="absolute inset-0 -z-10">
+      <div class="absolute inset-0"
+           style="background-image:url('./assets/gallery-1.jpg'); background-size:cover; background-position:center;"></div>
+      <div class="absolute inset-0 backdrop-blur-2xl bg-white/80"></div>
+      <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div class="text-[56px] md:text-[96px] font-black tracking-tight text-slate-900/10 blur-[1px] select-none">
+          SAZÓN TROPICAL
+        </div>
+      </div>
+    </div>
+
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center">
+        <h2 class="text-3xl font-extrabold">Galería</h2>
+        <p class="mt-2 text-slate-600">Fotos del local y comida.</p>
+      </div>
+
+      <div class="mt-8 grid grid-cols-2 md:grid-cols-3 gap-4">
+        <img src="./assets/gallery-1.jpg" class="w-full h-44 md:h-52 object-cover rounded-2xl shadow-lg" alt="Galería 1">
+        <img src="./assets/gallery-2.jpg" class="w-full h-44 md:h-52 object-cover rounded-2xl shadow-lg" alt="Galería 2">
+        <img src="./assets/gallery-3.jpg" class="w-full h-44 md:h-52 object-cover rounded-2xl shadow-lg" alt="Galería 3">
+        <img src="./assets/gallery-4.jpg" class="w-full h-44 md:h-52 object-cover rounded-2xl shadow-lg" alt="Galería 4">
+        <img src="./assets/gallery-5.jpg" class="w-full h-44 md:h-52 object-cover rounded-2xl shadow-lg" alt="Galería 5">
+        <img src="./assets/gallery-6.jpg" class="w-full h-44 md:h-52 object-cover rounded-2xl shadow-lg" alt="Galería 6">
+      </div>
+    </div>
+  </section>
+
+  <!-- UBICACION -->
+  <section id="ubicacion" class="relative py-14">
+    <div class="absolute inset-0 -z-10">
+      <div class="absolute inset-0"
+           style="background-image:url('./assets/gallery-2.jpg'); background-size:cover; background-position:center;"></div>
+      <div class="absolute inset-0 backdrop-blur-2xl bg-white/80"></div>
+      <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div class="text-[56px] md:text-[96px] font-black tracking-tight text-slate-900/10 blur-[1px] select-none">
+          SAZÓN TROPICAL
+        </div>
+      </div>
+    </div>
+
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="bg-white/65 border border-white/70 backdrop-blur-xl rounded-3xl p-7 shadow-xl">
+        <h2 class="text-3xl font-extrabold">Localización</h2>
+        <p class="mt-2 text-slate-700">Dirección (placeholder): 123 Calle Principal, Orlando, FL</p>
+
+        <div class="mt-6 rounded-3xl overflow-hidden border border-white/70 shadow-lg bg-white/60">
+          <!-- Placeholder map -->
+          <div class="h-72 flex items-center justify-center text-slate-600 font-semibold">
+            Aquí va el mapa (Google Maps embed).
+          </div>
+        </div>
+
+        <div class="mt-6 grid sm:grid-cols-3 gap-4">
+          <div class="rounded-2xl bg-white/70 border border-white/70 p-4">
+            <div class="font-extrabold">Horario</div>
+            <div class="text-sm text-slate-600 mt-1">Lun–Sáb: 9am – 9pm</div>
+            <div class="text-sm text-slate-600">Dom: 10am – 6pm</div>
+          </div>
+          <div class="rounded-2xl bg-white/70 border border-white/70 p-4">
+            <div class="font-extrabold">Teléfono</div>
+            <div class="text-sm text-slate-600 mt-1">(xxx) xxx-xxxx</div>
+          </div>
+          <div class="rounded-2xl bg-white/70 border border-white/70 p-4">
+            <div class="font-extrabold">Pedidos</div>
+            <div class="text-sm text-slate-600 mt-1">WhatsApp / Llamada</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="relative py-14">
+    <div class="absolute inset-0 -z-10">
+      <div class="absolute inset-0"
+           style="background-image:url('./assets/gallery-3.jpg'); background-size:cover; background-position:center;"></div>
+      <div class="absolute inset-0 backdrop-blur-2xl bg-white/80"></div>
+      <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div class="text-[56px] md:text-[96px] font-black tracking-tight text-slate-900/10 blur-[1px] select-none">
+          SAZÓN TROPICAL
+        </div>
+      </div>
+    </div>
+
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="bg-white/65 border border-white/70 backdrop-blur-xl rounded-3xl p-7 shadow-xl text-center">
+        <h2 class="text-3xl font-extrabold">Contacto</h2>
+        <p class="mt-2 text-slate-700">¿Listo para comer dominicano de verdad?</p>
+
+        <div class="mt-6 flex flex-wrap justify-center gap-3">
+          <!-- Cambia el link de WhatsApp cuando tengas el número -->
+          <a href="https://wa.me/1XXXXXXXXXX" target="_blank"
+             class="px-6 py-3 rounded-2xl font-extrabold text-white bg-emerald-600 shadow-lg shadow-emerald-600/25
+                    hover:-translate-y-0.5 hover:shadow-xl active:translate-y-0 transition">
+            Ordenar por WhatsApp
+          </a>
+
+          <a href="tel:+1XXXXXXXXXX"
+             class="px-6 py-3 rounded-2xl font-extrabold bg-white/70 border border-white/70 shadow-md
+                    hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 transition">
+            Llamar
+          </a>
+        </div>
+
+        <div class="mt-6 text-sm text-slate-600">
+          Redes (placeholders): Instagram · Facebook · TikTok
+        </div>
+      </div>
+
+      <footer class="mt-8 pb-10 text-center text-xs text-slate-600">
+        © <span id="y"></span> Sazón Tropical. Todos los derechos reservados.
+      </footer>
+    </div>
+  </section>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
