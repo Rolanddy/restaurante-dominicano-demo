@@ -466,11 +466,34 @@
     <div class="max-w-6xl mx-auto px-4">
       <div class="bg-white/65 border border-white/70 backdrop-blur-xl rounded-3xl p-7 shadow-xl">
         <h2 class="text-3xl font-extrabold">Localización</h2>
-        <p class="mt-2 text-slate-700">Dirección (placeholder): 123 Calle Principal, Orlando, FL</p>
+        <p class="mt-2 text-slate-700"><p class="mt-2 text-slate-700">
+  📍 2732 S Chickasaw Trail, Orlando, FL 32829
+</p>
+</p>
 
-        <div class="mt-6 rounded-3xl overflow-hidden border border-white/70 shadow-lg bg-white/60">
-          <div class="h-72 flex items-center justify-center text-slate-600 font-semibold">
-            Aquí va el mapa (Google Maps embed).
+        <div class="mt-6 rounded-3xl overflow-hidden border border-white/70 shadow-lg bg-white/60 backdrop-blur">
+  <iframe
+    src="https://www.google.com/maps?q=2732+S+Chickasaw+Trail,+Orlando,+FL+32829&output=embed"
+    class="w-full h-72 md:h-80"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+
+<!-- Botón cómo llegar -->
+<div class="mt-4 flex justify-center">
+  <a
+    href="https://www.google.com/maps/dir/?api=1&destination=2732+S+Chickasaw+Trail,+Orlando,+FL+32829"
+    target="_blank"
+    class="inline-flex items-center gap-2 px-6 py-3 rounded-2xl font-bold
+           bg-white/70 border border-white/70 shadow-md
+           hover:-translate-y-0.5 hover:shadow-xl transition">
+    📍 Cómo llegar
+  </a>
+</div>
+
           </div>
         </div>
 
